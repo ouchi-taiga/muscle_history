@@ -6,7 +6,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        
         <Route path='/' element={<Root />} />
         <Route path='/landing' element={<Landing />} />
         <Route path='/signup' element={<SignUp />} />
