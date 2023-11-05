@@ -9,25 +9,34 @@ const Landing = () => {
 
   return (
     <>
-      <Header />
-      <div className='landingContentsArea'>
-        <p className='explanation'>
-          筋肉歴へようこそ。
-          <br/>
-          ここではあなたが行ったトレーニングの記録をとることができます。
-          <br/>
-          日々の成果を残して筋肉を成長させていきましょう。
-        </p>
-        <Button
-          className='signInButton'
-          name={'ログイン'}
-          onClick={() => navigate('/signin')}
-        />
-        <Button
-          className='signUpButton'
-          name={'新規登録'}
-          onClick={()=>navigate('/signup')}
-        />
+      <div className='container'>
+        <div className='header'>
+          <Header />
+        </div>
+        <div className='explanation'>
+          <p>
+            筋肉歴へようこそ。
+            <br/>
+            ここではあなたが行ったトレーニングの記録をとることができます。
+            <br/>
+            日々の成果を残して筋肉を成長させていきましょう。
+          </p>
+        </div>
+        <div className='buttonArea'>
+          <Button
+            className='signInButton'
+            name={'ログイン'}
+            onClick={() => navigate('/signin')}
+          />
+          <Button
+            className='signUpButton'
+            name={'新規登録'}
+            onClick={()=>navigate('/signup')}
+          />
+        </div>
+        <div className='backGround'>
+
+        </div>
       </div>
     </>
   )
