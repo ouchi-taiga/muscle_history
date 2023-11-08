@@ -5,12 +5,19 @@ import './Header.css'
 const Header = () => {
   return (
     <header>
-      <div className='title'>
+      <div className='headerLogo'>
         <p>筋肉歴</p>
       </div>
-      <div className='userIcon'>
-        <UserIcon />
-      </div>
+      <nav className='headerNav'>
+        <ul className='headerList'>
+          <li className='aboutSite'>
+            このサイトについて
+          </li>
+          <li className='userIcon'>
+            <UserIcon />
+          </li>
+        </ul>
+      </nav>
     </header>
   )
 }
