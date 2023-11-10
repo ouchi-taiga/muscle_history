@@ -3,8 +3,8 @@
   /* グリッドコンテナ */
   .container {
     display: grid;
-    grid-template-rows: 100px 400px 300px;
-    grid-template-columns: 45% 1fr;
+    grid-template-rows: 100px 450px 300px;
+    grid-template-columns: 55% 1fr;
     grid-template-areas: 
       'header header'
       'areaA areaC'
@@ -15,10 +15,21 @@
   .header {
     grid-area: header;
   }
-  .explanation {
+  .content {
     grid-area: areaA;
-    align-self: center;   /* 垂直方向 */
+    align-self: end;   /* 垂直方向 */
     justify-self: center; /* 水平方向 */
+    padding: 32px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .introduction {
+    font-size: 1.5rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .buttonArea {

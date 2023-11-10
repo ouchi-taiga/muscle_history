@@ -13,13 +13,14 @@ const Landing = () => {
         <div className='header'>
           <Header />
         </div>
-        <div className='explanation'>
-          <p>
+        <div className='content'>
+          <p className='heading'>
             筋肉歴へようこそ。
+          </p>
+          <p className='introduction'>
+            ここではあなたが行った<wbr/>トレーニングの記録を<wbr/>とることが<wbr/>できます。
             <br/>
-            ここではあなたが行ったトレーニングの記録をとることができます。
-            <br/>
-            日々の成果を残して筋肉を成長させていきましょう。
+            日々の成果を残して<wbr/>筋肉を成長させていきましょう。
           </p>
         </div>
         <div className='buttonArea'>
