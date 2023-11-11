@@ -4,6 +4,7 @@ export { default as SignUp } from './pages/SignUp'
 export { default as SignIn } from './pages/SignIn'
 export { default as Home } from './pages/Home'
 export { default as Header } from './Header/Header'
+export { default as SiteIcon } from './SiteIcon/SiteIcon'
 export { default as UserIcon } from './UserIcon/UserIcon'
 export { default as Button } from './Button/Button'
 
