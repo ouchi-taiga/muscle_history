@@ -9,7 +9,7 @@ const Header = () => {
         <SiteIcon
           className='siteIcon'
         />
-        <p>筋肉歴</p>
+        <div>筋肉歴</div>
       </div>
       <nav className='headerNav'>
         <ul className='headerList'>
