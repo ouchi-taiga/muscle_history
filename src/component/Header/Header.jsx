@@ -14,7 +14,7 @@ const Header = () => {
       <nav className='headerNav'>
         <ul className='headerList'>
           <li className='aboutSite'>
-            このサイトについて
+            About
           </li>
           <li className='userIcon'>
             <UserIcon />
