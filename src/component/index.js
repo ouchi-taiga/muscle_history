@@ -6,5 +6,5 @@ export { default as Home } from './pages/Home'
 export { default as Header } from './Header/Header'
 export { default as SiteIcon } from './SiteIcon/SiteIcon'
 export { default as UserIcon } from './UserIcon/UserIcon'
-export { default as Button } from './Button/Button'
+export { default as ButtonWithArrow } from './Button/ButtonWithArrow/ButtonWithArrow'
 

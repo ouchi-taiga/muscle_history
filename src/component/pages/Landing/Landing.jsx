@@ -1,7 +1,7 @@
 import { React } from 'react'
 // import { useNavigate } from 'react-router-dom'
 import { useModal } from 'react-hooks-use-modal'
-import { Header, Button } from '../../index.js'
+import { Header, ButtonWithArrow } from '../../index.js'
 import './Landing.css'
 
 const Landing = () => {
@@ -31,18 +31,11 @@ const Landing = () => {
           </p>
         </div>
         <div className='buttonArea'>
-          <Button
+          <ButtonWithArrow
             className='signInButton'
-            name={'ログイン'}
+            name={'はじめる'}
             onClick={open}
           />
-          <Button
-            className='signUpButton'
-            name={'新規登録'}
-            onClick={open}
-          />
-        </div>
-        <div className='backGround'>
         </div>
         <Modal>
           <div>
