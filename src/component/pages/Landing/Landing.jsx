@@ -1,11 +1,18 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Header, Button } from '../index.js'
+import { React } from 'react'
+// import { useNavigate } from 'react-router-dom'
+import { useModal } from 'react-hooks-use-modal'
+import { Header, Button } from '../../index.js'
 import './Landing.css'
 
 const Landing = () => {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+  const [Modal, open, close] = useModal('root', {
+    preventScroll: true,
+    focusTrapKOption: {
+      clickOutsideDeactives: false
+    },
+  })
 
   return (
     <>
@@ -27,17 +34,22 @@ const Landing = () => {
           <Button
             className='signInButton'
             name={'ログイン'}
-            onClick={() => navigate('/signin')}
+            onClick={open}
           />
           <Button
             className='signUpButton'
             name={'新規登録'}
-            onClick={()=>navigate('/signup')}
+            onClick={open}
           />
         </div>
         <div className='backGround'>
-
         </div>
+        <Modal>
+          <div>
+            <h1>Title</h1>
+            <button onClick={close}>閉じる</button>
+          </div>
+        </Modal>
       </div>
     </>
   )

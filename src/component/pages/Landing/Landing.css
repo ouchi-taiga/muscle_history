@@ -27,12 +27,29 @@
 
   .heading {
     font-size: 2rem;
+    display: block;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: slideInFromBottom 1.5s forwards;
+    animation-delay: 0.1s;
   }
 
   .introduction {
     font-size: 1.5rem;
     word-break: keep-all;
     overflow-wrap: break-word;
+    display: block;
+    opacity: 0;
+    transform: translateY(-50%);
+    animation: slideInFromBottom 1.5s forwards;
+    animation-delay: 1s;
+  }
+
+  @keyframes slideInFromBottom {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
   }
 
   .buttonArea {
@@ -46,7 +63,7 @@
 
   .backGround {
     grid-area: areaC;
-    background-image: url(../../../public/Landing_Background.jpg);
+    background-image: url(./Landing_Background.jpg);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 200px 100%);
     background-repeat: no-repeat;
   }
