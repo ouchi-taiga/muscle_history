@@ -1,13 +1,13 @@
 import { React } from 'react'
 // import { useNavigate } from 'react-router-dom'
 import { useModal } from 'react-hooks-use-modal'
-import { Header, ButtonWithArrow } from '../../index.js'
+import { Header, SignInButton, SignInModal } from '../../index.js'
 import './Landing.css'
 
 const Landing = () => {
 
   // const navigate = useNavigate();
-  const [Modal, open, close] = useModal('root', {
+  const [Modal, open, close, isOpen] = useModal('root', {
     preventScroll: true,
     focusTrapKOption: {
       clickOutsideDeactives: false
@@ -20,7 +20,7 @@ const Landing = () => {
         <div className='header'>
           <Header />
         </div>
-        <div className='content'>
+        {!isOpen && <div className='content'>
           <p className='heading'>
             筋肉歴へようこそ。
           </p>
@@ -29,19 +29,18 @@ const Landing = () => {
             <br/>
             日々の成果を残して<wbr/>筋肉を成長させていきましょう。
           </p>
-        </div>
-        <div className='buttonArea'>
-          <ButtonWithArrow
+        </div>}
+        {!isOpen && <div className='buttonArea'>
+          <SignInButton
             className='signInButton'
             name={'はじめる'}
             onClick={open}
           />
-        </div>
-        <Modal>
-          <div>
-            <h1>Title</h1>
-            <button onClick={close}>閉じる</button>
-          </div>
+        </div>}
+        <Modal className='signInModal'>
+          <SignInModal
+            onClick={close}
+          />
         </Modal>
       </div>
     </>

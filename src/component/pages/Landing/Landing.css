@@ -57,7 +57,7 @@
   .buttonArea {
     grid-area: areaB;
     justify-self: center;
-    width: 500px;
+    width: 350px;
     text-align: center;
     padding-top: 20px;
   }

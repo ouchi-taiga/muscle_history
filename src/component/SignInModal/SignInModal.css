@@ -1,0 +1,11 @@
+.signInModalContent {
+  width: 800px;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 16px 12px 12px 3px rgba(0, 0, 0, 0.5);
+}

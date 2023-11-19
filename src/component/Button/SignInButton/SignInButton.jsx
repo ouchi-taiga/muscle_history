@@ -1,7 +1,7 @@
 import React from 'react'
-import './ButtonWithArrow.css'
+import './SignInButton.css'
 
-const ButtonWithArrow = (props) => {
+const SignInButton = (props) => {
   return (
     <>
       <link
@@ -12,7 +12,7 @@ const ButtonWithArrow = (props) => {
         className={props.className}
         onClick={props.onClick}
         >{props.name}
-        <span class="material-symbols-outlined">
+        <span className="material-symbols-outlined">
           arrow_forward_ios
         </span>
       </button>
@@ -20,4 +20,4 @@ const ButtonWithArrow = (props) => {
   )
 }
 
-export default ButtonWithArrow
+export default SignInButton
