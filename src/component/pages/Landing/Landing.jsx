@@ -39,6 +39,7 @@ const Landing = () => {
         </div>}
         <Modal className='signInModal'>
           <SignInModal
+            className={!isOpen ? 'signInModalContent' : 'blurSignInModalContent'}
             onClick={close}
           />
         </Modal>

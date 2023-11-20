@@ -2,9 +2,9 @@ import React from 'react'
 import './SignInModal.css'
 import { SubmitButton, MailInputForm, PasswordInputForm } from '../index.js'
 
-const SignInModal = () => {
+const SignInModal = (props) => {
   return (
-    <div className='signInModalContent'>
+    <div className={props.className}>
       <MailInputForm
         className='mailInputForm'
         iconName='mail'

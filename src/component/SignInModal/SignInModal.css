@@ -1,11 +1,32 @@
-.signInModalContent {
-  width: 800px;
-  height: 600px;
-  background: rgba(255, 255, 255, 0.03);
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 16px 12px 12px 3px rgba(0, 0, 0, 0.5);
+/** PCサイズ **/
+@media screen and (min-width: 1025px) {
+  .signInModalContent, .blurSignInModalContent {
+    width: 900px;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 16px 12px 12px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .blurSignInModalContent {
+    backdrop-filter: blur(12px);
+  }
+}
+
+
+
+/** タブレットサイズ **/
+@media screen and (min-width: 481px) and (max-width:1024px) {
+  p {color : green}
+}
+
+
+
+/** モバイルサイズ **/
+@media screen and (max-width: 480px) {
+  p {color : blue}
 }
