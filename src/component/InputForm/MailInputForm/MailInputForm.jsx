@@ -1,20 +1,20 @@
 import React from 'react'
-import './MailInputForm.css'
+import { CiMail } from "react-icons/ci";
+import styles from './MailInputForm.module.css'
 
 const MailInputForm = (props) => {
   return (
     <>
-      <div className='mailInputFormArea'>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
+      <div className={styles.mailInputFormArea}>
         <input
-          className={props.className}
+          className={styles.mailInputForm}
           placeholder='email'
         />
-        <span class="material-symbols-outlined">
-        {props.iconName}
+        <span>
+          <CiMail 
+            className={styles.mailIcon}
+            size={30}
+          />
         </span>
       </div>
     </>

@@ -22,17 +22,9 @@
   opacity: 0.8;
 }
 
-.mailInputFormArea .material-symbols-outlined {
-  width: 28px;
+.mailIcon {
   position: absolute;
   left: 0px;
+  bottom: 3px;
   color: #F2F2F2;
-}
-
-.mailInputFormArea .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
 }

@@ -1,21 +1,21 @@
 import React from 'react'
-import './PasswordInputForm.css'
+import { CiLock } from "react-icons/ci";
+import styles from './PasswordInputForm.module.css'
 
 const PasswordInputForm = (props) => {
   return (
     <>
-      <div className='passwordInputFormArea'>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
+      <div className={styles.passwordInputFormArea}>
         <input
           type='password'
-          className={props.className}
+          className={styles.passwordInputForm}
           placeholder='password'
         />
-        <span class="material-symbols-outlined">
-        {props.iconName}
+        <span>
+          <CiLock
+            class={styles.passwordIcon}
+            size={30}
+          />
         </span>
       </div>
     </>

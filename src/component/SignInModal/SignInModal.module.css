@@ -3,7 +3,7 @@
   .signInModalContent, .blurSignInModalContent {
     width: 900px;
     height: 600px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     gap: 64px;

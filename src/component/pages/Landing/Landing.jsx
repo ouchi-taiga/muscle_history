@@ -2,7 +2,7 @@ import { React } from 'react'
 // import { useNavigate } from 'react-router-dom'
 import { useModal } from 'react-hooks-use-modal'
 import { Header, SignInButton, SignInModal } from '../../index.js'
-import './Landing.css'
+import styles from './Landing.module.css'
 
 const Landing = () => {
 
@@ -16,23 +16,22 @@ const Landing = () => {
 
   return (
     <>
-      <div className='container'>
-        <div className='header'>
+      <div className={styles.container}>
+        <div className={styles.header}>
           <Header />
         </div>
-        {!isOpen && <div className='content'>
-          <p className='heading'>
+        {!isOpen && <div className={styles.content}>
+          <p className={styles.heading}>
             筋肉歴へようこそ。
           </p>
-          <p className='introduction'>
+          <p className={styles.introduction}>
             ここではあなたが行った<wbr/>トレーニングの記録を<wbr/>とることが<wbr/>できます。
             <br/>
             日々の成果を残して<wbr/>筋肉を成長させていきましょう。
           </p>
         </div>}
-        {!isOpen && <div className='buttonArea'>
+        {!isOpen && <div className={styles.buttonArea}>
           <SignInButton
-            className='signInButton'
             name={'はじめる'}
             onClick={open}
           />

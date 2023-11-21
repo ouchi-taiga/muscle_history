@@ -1,7 +1,5 @@
 export { default as Root } from './pages/Root'
 export { default as Landing } from './pages/Landing/Landing'
-export { default as SignUp } from './pages/SignUp/SignUp'
-export { default as SignIn } from './pages/SignIn/SignIn'
 export { default as Home } from './pages/Home'
 export { default as Header } from './Header/Header'
 export { default as SiteIcon } from './SiteIcon/SiteIcon'
