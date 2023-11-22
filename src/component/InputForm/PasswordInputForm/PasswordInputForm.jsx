@@ -2,7 +2,7 @@ import React from 'react'
 import { CiLock } from "react-icons/ci";
 import styles from './PasswordInputForm.module.css'
 
-const PasswordInputForm = (props) => {
+const PasswordInputForm = () => {
   return (
     <>
       <div className={styles.passwordInputFormArea}>

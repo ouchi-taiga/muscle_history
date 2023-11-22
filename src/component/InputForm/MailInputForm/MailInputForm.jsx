@@ -2,7 +2,7 @@ import React from 'react'
 import { CiMail } from "react-icons/ci";
 import styles from './MailInputForm.module.css'
 
-const MailInputForm = (props) => {
+const MailInputForm = () => {
   return (
     <>
       <div className={styles.mailInputFormArea}>

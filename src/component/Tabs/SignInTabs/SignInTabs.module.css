@@ -1,0 +1,73 @@
+/** PCサイズ **/
+@media screen and (min-width: 1025px) {
+  .TabContentArea {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tabs {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tabList {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 48px;
+    margin: 0;
+    padding: 0px 24px 0px 0px;
+    height: 80px;
+    list-style: none;
+    font-size: 1.3rem;
+    position: relative;
+  }
+
+  .title {
+    position: absolute;
+    left: 48px;
+    font-size: 2rem;
+  }
+
+  .tabPanelContent1 {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 140px 120px 140px;
+    grid-template-areas:
+      'mailInput'
+      'passwordInput'
+      'submitButton';
+  }
+
+  .mailInputForm {
+    grid-area: mailInput;
+    justify-self: center;
+    align-self: end;
+  }
+
+  .passwordInputForm {
+    grid-template-areas: passwordInput;
+    justify-self: center;
+    align-self: end;
+  }
+
+  .submitButton {
+    grid-template-areas: submitButton;
+    justify-self: center;
+    align-self: end;
+  }
+}
+
+
+
+/** タブレットサイズ **/
+@media screen and (min-width: 481px) and (max-width:1024px) {
+  p {color : green}
+}
+
+
+
+/** モバイルサイズ **/
+@media screen and (max-width: 480px) {
+  p {color : blue}
+}
