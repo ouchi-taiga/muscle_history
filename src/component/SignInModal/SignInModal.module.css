@@ -1,11 +1,11 @@
 /** PCサイズ **/
 @media screen and (min-width: 1025px) {
   .signInModalContent, .blurSignInModalContent {
-    width: 900px;
-    height: 600px;
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 16px 12px 12px 3px rgba(0, 0, 0, 0.5);
+    width: 50vw;
+    height: 65vh;
+    color: rgb(44, 62, 80, 0.6);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 16px 12px 12px 3px rgba(0, 0, 0, 0.8);
   }
 
   .blurSignInModalContent {

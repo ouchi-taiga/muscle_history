@@ -16,8 +16,11 @@ const SignInTabs = () => {
         className={styles.tabs}
         onSelect={handleSelect}
         defaultIndexIndex={0}
+        selectedTabClassName={styles.activeTab}
       >
-        <TabList className={styles.tabList}>
+        <TabList
+          className={styles.tabList}
+        >
           <div className={styles.title}></div>
           <Tab className={styles.tabListButton1}>Sign in</Tab>
           <Tab className={styles.tabListButton2}>Sign up</Tab>

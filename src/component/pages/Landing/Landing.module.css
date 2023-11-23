@@ -28,7 +28,7 @@
   }
 
   .heading {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     display: block;
     opacity: 0;
     transform: translateY(-100%);
@@ -37,7 +37,7 @@
   }
 
   .introduction {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     word-break: keep-all;
     overflow-wrap: break-word;
     display: block;
@@ -45,6 +45,10 @@
     transform: translateY(-50%);
     animation: slideInFromBottom 1.5s forwards;
     animation-delay: 1s;
+  }
+
+  .signInModal {
+    width: 100%;
   }
   /* フェードインアニメーション */
   @keyframes slideInFromBottom {

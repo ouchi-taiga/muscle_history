@@ -7,12 +7,14 @@ const SubmitButton = (props) => {
     <>
       <button
         className={styles.submitButton}
-      >Enter
-        <span>
+      >
+        <div className={styles.titleArea}>
+          <div className={styles.title}>Enter</div>
           <MdArrowForwardIos
             className={styles.rightArrow}
+            size={20}
           />
-        </span>
+        </div>
       </button>
     </>
   )

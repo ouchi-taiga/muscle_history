@@ -13,7 +13,7 @@ header {
   margin: 0;
   height: 100%;
   padding-left: 64px;
-  font-size: 3em;
+  font-size: 4.5rem;
   font-weight: bold;
   color: #ecf0f1;
   cursor: pointer;
@@ -35,4 +35,10 @@ header {
 
 .aboutSite {
   cursor: pointer;
+  font-size: 2rem;
+}
+
+.userIcon {
+  cursor: pointer;
+  font-size: 2rem;
 }

@@ -36,7 +36,7 @@ const Landing = () => {
             onClick={open}
           />
         </div>}
-        <Modal className='signInModal'>
+        <Modal>
           <SignInModal
             className={!isOpen ? 'signInModalContent' : 'blurSignInModalContent'}
             onClick={close}

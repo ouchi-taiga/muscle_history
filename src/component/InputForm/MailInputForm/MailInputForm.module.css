@@ -3,14 +3,13 @@
 }
 
 .mailInputForm {
-  padding: 0px 30px 8px 60px;
+  padding: 0px 30px 9px 60px;
   width: 270px;
-  font-size: 1.3rem;
-  font-weight: lighter;
-  color: #F2F2F2;
+  font-size: 2.3rem;
+  color: rgb(44, 62, 80);
   border: none;
   border-bottom: 1px solid;
-  border-color: #F2F2F2;
+  border-color: rgb(44, 62, 80);
   background: rgba(0, 0, 0, 0);
 }
 
@@ -19,7 +18,7 @@
 }
 
 .mailInputForm::placeholder {
-  color: #F2F2F2;
+  color: rgb(44, 62, 80);
   opacity: 0.8;
 }
 
@@ -27,5 +26,5 @@
   position: absolute;
   left: 0px;
   bottom: 8px;
-  color: #F2F2F2;
+  color: rgb(44, 62, 80);
 }
