@@ -15,35 +15,33 @@ const Landing = () => {
   })
 
   return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <Header />
-        </div>
-        {!isOpen && <div className={styles.content}>
-          <p className={styles.heading}>
-            筋肉歴へようこそ。
-          </p>
-          <p className={styles.introduction}>
-            ここではあなたが行った<wbr/>トレーニングの記録を<wbr/>とることが<wbr/>できます。
-            <br/>
-            日々の成果を残して<wbr/>筋肉を成長させていきましょう。
-          </p>
-        </div>}
-        {!isOpen && <div className={styles.buttonArea}>
-          <SignInButton
-            name={'はじめる'}
-            onClick={open}
-          />
-        </div>}
-        <Modal>
-          <SignInModal
-            className={!isOpen ? 'signInModalContent' : 'blurSignInModalContent'}
-            onClick={close}
-          />
-        </Modal>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <Header />
       </div>
-    </>
+      {!isOpen && <div className={styles.content}>
+        <p className={styles.heading}>
+          筋肉歴へようこそ。
+        </p>
+        <p className={styles.introduction}>
+          ここではあなたが行った<wbr/>トレーニングの記録を<wbr/>とることが<wbr/>できます。
+          <br/>
+          日々の成果を残して<wbr/>筋肉を成長させていきましょう。
+        </p>
+      </div>}
+      {!isOpen && <div className={styles.buttonArea}>
+        <SignInButton
+          name={'はじめる'}
+          onClick={open}
+        />
+      </div>}
+      <Modal>
+        <SignInModal
+          className={!isOpen ? 'signInModalContent' : 'blurSignInModalContent'}
+          onClick={close}
+        />
+      </Modal>
+    </div>
   )
 }
 

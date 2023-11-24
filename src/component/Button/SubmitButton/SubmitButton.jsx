@@ -12,7 +12,7 @@ const SubmitButton = (props) => {
           <div className={styles.title}>Enter</div>
           <MdArrowForwardIos
             className={styles.rightArrow}
-            size={20}
+            size={'2.3rem'}
           />
         </div>
       </button>

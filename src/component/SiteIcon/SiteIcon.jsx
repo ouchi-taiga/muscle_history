@@ -1,9 +1,9 @@
 import React from 'react'
-import './SiteIcon.css'
+import styles from './SiteIcon.module.css'
 
-const SiteIcon = (props) => {
+const SiteIcon = () => {
   return (
-    <img className={props.className} src='./muscle.png' alt='サイトアイコン' />
+    <img className={styles.siteIcon} src='./muscle.png' alt='サイトアイコン' />
   )
 }
 

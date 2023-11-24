@@ -6,9 +6,7 @@ const Header = () => {
   return (
     <header>
       <div className={styles.headerLogo}>
-        <SiteIcon
-          className='siteIcon'
-        />
+        <SiteIcon />
         <div>筋肉歴</div>
       </div>
       <nav className={styles.headerNav}>

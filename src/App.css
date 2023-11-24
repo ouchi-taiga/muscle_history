@@ -21,4 +21,9 @@ html {
 body {
   background-color: #ecf0f1;
   font-family: 'Noto Sans JP', sans-serif;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
 }

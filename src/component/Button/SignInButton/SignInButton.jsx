@@ -8,12 +8,14 @@ const SignInButton = (props) => {
       <button
         className={styles.signInButton}
         onClick={props.onClick}
-        >{props.name}
-        <span>
+      >
+        <div className={styles.titleArea}>
+          <div className={styles.title}>はじめる</div>
           <MdArrowForwardIos
             className={styles.rightArrow}
+            size={'2.3rem'}
           />
-        </span>
+        </div>
       </button>
     </>
   )

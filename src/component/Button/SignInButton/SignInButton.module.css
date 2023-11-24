@@ -1,13 +1,8 @@
 /** PCサイズ **/
 @media screen and (min-width: 1025px) {
   .signInButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    max-width: 350px;
-    height: 55px;
-    font-size: 2.3rem;
+    height: 100%;
     color: #F2F2F2;
     background: rgba(230, 126, 34, 0.65);
     border: none;
@@ -16,15 +11,24 @@
     position: relative;
   }
   
-  .signInButton:hover {
+  .submitButton:hover {
     opacity: 0.5;
     transition: 0.3s;
   }
-  
-  .rightArrow {
+
+  .titleArea {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+
+  .title {
     position: absolute;
-    top: 16px;
-    right: 20px;
+    right: 0;
+    left: 0;
+    font-size: 2.3rem;
   }
 }
 
