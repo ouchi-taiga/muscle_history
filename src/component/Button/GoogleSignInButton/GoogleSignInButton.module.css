@@ -1,17 +1,16 @@
 /** PCサイズ **/
 @media screen and (min-width: 1025px) {
-  .signInButton {
+  .googleSignInButton {
     width: 100%;
     height: 100%;
     color: #F2F2F2;
-    background: rgba(230, 126, 34, 0.65);
+    background: rgba(44, 62, 80);
     border: none;
-    border-radius: 32px;
     cursor: pointer;
     position: relative;
   }
   
-  .signInButton:hover {
+  .googleSignInButton:hover {
     opacity: 0.5;
     transition: 0.3s;
   }
@@ -28,7 +27,7 @@
     position: absolute;
     right: 0;
     left: 0;
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 }
 

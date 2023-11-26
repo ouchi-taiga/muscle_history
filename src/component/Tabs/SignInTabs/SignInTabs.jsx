@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './SignInTabs.module.css'
-import { SubmitButton, MailInputForm, PasswordInputForm } from '../../index.js'
+import { SubmitButton, MailInputForm, PasswordInputForm, GoogleSignInButton } from '../../index.js'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 
 const SignInTabs = () => {
@@ -35,6 +35,10 @@ const SignInTabs = () => {
           </div>
           <div className={styles.submitButton}>
             <SubmitButton />
+          </div>
+          <hr className={styles.horizontalLine}/>
+          <div className={styles.googleSignInButton}>
+            <GoogleSignInButton />
           </div>
         </TabPanel>
         <TabPanel className={styles.tabPanelContent2}>
