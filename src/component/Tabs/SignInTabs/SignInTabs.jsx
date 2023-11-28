@@ -15,7 +15,7 @@ const SignInTabs = () => {
       <Tabs
         className={styles.tabs}
         onSelect={handleSelect}
-        defaultIndexIndex={0}
+        defaultIndex={0}
         selectedTabClassName={styles.activeTab}
       >
         <TabList
@@ -26,23 +26,39 @@ const SignInTabs = () => {
           <Tab className={styles.tabListButton2}>Sign up</Tab>
         </TabList>
 
-        <TabPanel className={styles.tabPanelContent1}>
-          <div className={styles.mailInputForm}>
-            <MailInputForm />
-          </div>
-          <div className={styles.passwordInputForm}>
-            <PasswordInputForm />
-          </div>
-          <div className={styles.submitButton}>
-            <SubmitButton />
-          </div>
-          <hr className={styles.horizontalLine}/>
-          <div className={styles.googleSignInButton}>
-            <GoogleSignInButton />
+        <TabPanel className={styles.tabPanel}>
+          <div className={styles.signInTabContent}>
+            <div className={styles.mailInputForm}>
+              <MailInputForm />
+            </div>
+            <div className={styles.passwordInputForm}>
+              <PasswordInputForm />
+            </div>
+            <div className={styles.submitButton}>
+              <SubmitButton />
+            </div>
+            <hr className={styles.horizontalLine}/>
+            <div className={styles.googleSignInButton}>
+              <GoogleSignInButton />
+            </div>
           </div>
         </TabPanel>
-        <TabPanel className={styles.tabPanelContent2}>
-          test
+        <TabPanel className={styles.tabPanel}>
+          <div className={styles.signUpTabContent}>
+            <div className={styles.mailInputForm}>
+              <MailInputForm />
+            </div>
+            <div className={styles.passwordInputForm}>
+              <PasswordInputForm />
+            </div>
+            <div className={styles.submitButton}>
+              <SubmitButton />
+            </div>
+            <hr className={styles.horizontalLine}/>
+            <div className={styles.googleSignInButton}>
+              <GoogleSignInButton />
+            </div>
+          </div>
         </TabPanel>
       </Tabs>
     </div>
