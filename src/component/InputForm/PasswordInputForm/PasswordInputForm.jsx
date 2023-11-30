@@ -13,7 +13,7 @@ const PasswordInputForm = () => {
         />
         <span>
           <CiLock
-            class={styles.passwordIcon}
+            className={styles.passwordIcon}
             size={30}
           />
         </span>
