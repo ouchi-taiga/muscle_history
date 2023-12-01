@@ -26,7 +26,7 @@ header {
 
 .headerList {
   display: flex;
-  gap: 32px;
+  gap: 42px;
   align-items: center;
   list-style: none;
   color: #ecf0f1;
@@ -38,7 +38,8 @@ header {
   font-size: 2rem;
 }
 
-.userIcon {
+.userIconArea {
+  width: 6rem;
+  height: 6rem;
   cursor: pointer;
-  font-size: 2rem;
 }

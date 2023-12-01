@@ -3,7 +3,11 @@ import styles from './SiteIcon.module.css'
 
 const SiteIcon = () => {
   return (
-    <img className={styles.siteIcon} src='./muscle.png' alt='サイトアイコン' />
+    <img
+      className={styles.siteIcon}
+      src='./muscle.png'
+      alt='サイトアイコン'
+    />
   )
 }
 
