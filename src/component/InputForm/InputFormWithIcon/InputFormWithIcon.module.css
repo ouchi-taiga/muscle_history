@@ -1,0 +1,19 @@
+.inputFormArea {
+  position: relative;
+}
+
+.inputForm:focus {
+  outline: none;
+}
+
+.inputForm::placeholder {
+  color: rgb(44, 62, 80);
+  opacity: 0.6;
+}
+
+.iconArea {
+  position: absolute;
+  left: 0px;
+  bottom: 8px;
+  color: rgb(44, 62, 80);
+}

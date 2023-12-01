@@ -1,12 +1,45 @@
 import React from 'react'
 import styles from './SignInModal.module.css'
-import { MailInputForm, PasswordInputForm, ButtonWithIcon, RightArrowIcon, GoogleIcon } from '../index.js'
+import { ButtonWithIcon, InputFormWithIcon, RightArrowIcon, GoogleIcon, MailIcon, PasswordIcon } from '../index.js'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 
 
 const SignInModal = (props) => {
-  const className  = styles[props.className];
+  // メール入力フォーム
+  const mailInputFormStyle = {
+    padding: '0px 30px 9px 60px',
+    width: 'calc(100% - 90px)',
+    fontSize: '2.3rem',
+    color: 'rgb(44, 62, 80)',
+    border: 'none',
+    borderBottom: '1px solid',
+    borderColor: 'rgb(44, 62, 80)',
+    background: 'rgba(0, 0, 0, 0)'
+  };
 
+  const mailInputFormIconStyle = {
+    width: '3rem',
+    height: '3rem',
+  };
+
+  // パスワード入力フォーム
+  const passwordInputFormStyle = {
+    padding: '0px 30px 9px 60px',
+    width: 'calc(100% - 90px)',
+    fontSize: '2.3rem',
+    color: 'rgb(44, 62, 80)',
+    border: 'none',
+    borderBottom: '1px solid',
+    borderColor: 'rgb(44, 62, 80)',
+    background: 'rgba(0, 0, 0, 0)'
+  };
+
+  const passwordInputFormIconStyle = {
+    width: '3rem',
+    height: '3rem',
+  };
+
+  // サインインボタン
   const signInButtonStyle = {
     width: '100%',
     height: '100%',
@@ -23,6 +56,7 @@ const SignInModal = (props) => {
     height: '2.3rem'
   };
 
+  // Googleサインインボタン
   const googleSignInButtonStyle = {
     width: '100%',
     height: '100%',
@@ -43,6 +77,8 @@ const SignInModal = (props) => {
     console.log('Selected tab: ' + index + ', Last tab: ' + last);
   }
 
+  const className  = styles[props.className];
+
   return (
     <div className={className}>
       <Tabs
@@ -51,20 +87,35 @@ const SignInModal = (props) => {
         defaultIndex={0}
         selectedTabClassName={styles.activeTab}
       >
+        {/* タブ */}
         <TabList  className={styles.tabList}>
           <div className={styles.title}></div>
           <Tab className={styles.tabListButton1}>Sign in</Tab>
           <Tab className={styles.tabListButton2}>Sign up</Tab>
         </TabList>
 
+        {/* タブ1のコンテンツ */}
         <TabPanel className={styles.tabPanel}>
           <div className={styles.signInTabContent}>
             <div className={styles.mailInputForm}>
-              <MailInputForm />
+              <InputFormWithIcon
+                placeholder={'mail'}
+                icon={<MailIcon />}
+                inputFormStyle={mailInputFormStyle}
+                iconStyle={mailInputFormIconStyle}
+              />
             </div>
+
             <div className={styles.passwordInputForm}>
-              <PasswordInputForm />
+              <InputFormWithIcon
+                placeholder={'password'}
+                type={'password'}
+                icon={<PasswordIcon />}
+                inputFormStyle={passwordInputFormStyle}
+                iconStyle={passwordInputFormIconStyle}
+              />
             </div>
+
             <div className={styles.signInButton}>
               <ButtonWithIcon
                 name={'サインイン'}
@@ -75,7 +126,9 @@ const SignInModal = (props) => {
                 iconStyle={signInButtonIconStyle}
               />
             </div>
+
             <hr className={styles.horizontalLine}/>
+
             <div className={styles.googleSignInButton}>
               <ButtonWithIcon
                 name={'Googleでサインイン'}
@@ -88,14 +141,29 @@ const SignInModal = (props) => {
             </div>
           </div>
         </TabPanel>
+
+        {/* タブ2のコンテンツ */}
         <TabPanel className={styles.tabPanel}>
           <div className={styles.signUpTabContent}>
             <div className={styles.mailInputForm}>
-              <MailInputForm />
+              <InputFormWithIcon
+                placeholder={'mail'}
+                icon={<MailIcon />}
+                inputFormStyle={mailInputFormStyle}
+                iconStyle={mailInputFormIconStyle}
+              />
             </div>
+
             <div className={styles.passwordInputForm}>
-              <PasswordInputForm />
+              <InputFormWithIcon
+                placeholder={'password'}
+                type={'password'}
+                icon={<PasswordIcon />}
+                inputFormStyle={passwordInputFormStyle}
+                iconStyle={passwordInputFormIconStyle}
+              />
             </div>
+
             <div className={styles.signInButton}>
               <ButtonWithIcon
                 name={'アカウントを作成'}
