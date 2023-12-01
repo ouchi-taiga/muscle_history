@@ -1,7 +1,7 @@
 import { React } from 'react'
 // import { useNavigate } from 'react-router-dom'
 import { useModal } from 'react-hooks-use-modal'
-import { Header, SignInButton, SignInModal } from '../../index.js'
+import { Header, ButtonWithIcon, SignInModal, RightArrowIcon } from '../../index.js'
 import styles from './Landing.module.css'
 
 const Landing = () => {
@@ -13,6 +13,21 @@ const Landing = () => {
       clickOutsideDeactives: false
     },
   })
+
+  const startButtonStyle = {
+    width: '100%',
+    height: '100%',
+    color: '#F2F2F2',
+    background: 'rgba(230, 126, 34, 0.65)',
+    border: 'none',
+    borderRadius: '32px',
+    cursor: 'pointer',
+    fontSize: '2.3rem'
+  }
+  const startButtonIconStyle = {
+    width: '2.3rem',
+    height: '2.3rem'
+  }
 
   return (
     <div className={styles.container}>
@@ -30,9 +45,12 @@ const Landing = () => {
         </p>
       </div>}
       {!isOpen && <div className={styles.buttonArea}>
-        <SignInButton
+        <ButtonWithIcon
           name={'はじめる'}
+          icon={<RightArrowIcon />}
           onClick={open}
+          buttonStyle={startButtonStyle}
+          iconStyle={startButtonIconStyle}
         />
       </div>}
       <Modal>

@@ -115,7 +115,7 @@
     height: 40%;
   }
 
-  .submitButton {
+  .signInButton {
     grid-template-areas: submitButton;
     justify-self: center;
     align-self: end;
