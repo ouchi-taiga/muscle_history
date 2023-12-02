@@ -2,6 +2,8 @@ import React from 'react'
 import styles from './SignInModal.module.css'
 import { ButtonWithIcon, InputFormWithIcon, RightArrowIcon, GoogleIcon, MailIcon, PasswordIcon } from '../index.js'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import { auth, provider } from '../../firebase'
+import { signInWithRedirect } from 'firebase/auth'
 
 
 const SignInModal = (props) => {
@@ -77,6 +79,10 @@ const SignInModal = (props) => {
     console.log('Selected tab: ' + index + ', Last tab: ' + last);
   }
 
+  const signInWithGoogle = () => {
+    signInWithRedirect(auth, provider)
+  }
+
   const className  = styles[props.className];
 
   return (
@@ -97,6 +103,10 @@ const SignInModal = (props) => {
         {/* タブ1のコンテンツ */}
         <TabPanel className={styles.tabPanel}>
           <div className={styles.signInTabContent}>
+            <div className={styles.messageArea}>
+              すでにアカウントをお持ちですか？
+            </div>
+
             <div className={styles.mailInputForm}>
               <InputFormWithIcon
                 placeholder={'mail'}
@@ -134,7 +144,7 @@ const SignInModal = (props) => {
                 name={'Googleでサインイン'}
                 icon={<GoogleIcon />}
                 // TODO: Googleによるサインイン機能の実装
-                // onClick={}
+                onClick={signInWithGoogle}
                 buttonStyle={googleSignInButtonStyle}
                 iconStyle={googleSignInButtonIconStyle}
               />
@@ -145,6 +155,10 @@ const SignInModal = (props) => {
         {/* タブ2のコンテンツ */}
         <TabPanel className={styles.tabPanel}>
           <div className={styles.signUpTabContent}>
+            <div className={styles.messageArea}>
+              アカウントを作成する
+            </div>
+
             <div className={styles.mailInputForm}>
               <InputFormWithIcon
                 placeholder={'mail'}

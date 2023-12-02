@@ -6,7 +6,7 @@
     display: grid;
     background-image: url(./Landing_Background.jpg);
     background-size: cover;
-    grid-template-rows: 11% 50% 1fr;
+    grid-template-rows: 11% 45% 1fr;
     grid-template-columns: 900px 1fr;
     grid-auto-flow: dense;
     grid-template-areas: 
@@ -29,7 +29,7 @@
   }
 
   .heading {
-    font-size: 3.5rem;
+    font-size: 5rem;
     display: block;
     opacity: 0;
     transform: translateY(-100%);

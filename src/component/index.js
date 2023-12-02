@@ -1,9 +1,10 @@
 // Pages
 export { default as Root } from './pages/Root'
 export { default as Landing } from './pages/Landing/Landing'
-export { default as Home } from './pages/Home'
+export { default as Home } from './pages/Home/Home'
 
 // Components
+export { default as RequireAuth } from './RequireAuth/RequireAuth'
 export { default as Header } from './Header/Header'
 export { default as SignInModal } from './SignInModal/SignInModal'
 export { default as ButtonWithIcon } from './Button/ButtonWithIcon/ButtonWithIcon'

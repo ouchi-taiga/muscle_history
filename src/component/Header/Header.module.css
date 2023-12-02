@@ -13,7 +13,7 @@ header {
   margin: 0;
   height: 100%;
   padding-left: 64px;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #ecf0f1;
   cursor: pointer;
@@ -40,6 +40,6 @@ header {
 
 .userIconArea {
   width: 6rem;
-  height: 6rem;
+  height: 4rem;
   cursor: pointer;
 }

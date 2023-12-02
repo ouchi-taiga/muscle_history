@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom'
 
 const Root = () => {
   return (
-    <Navigate to='/landing' />
+    <Navigate to='/home' />
   )
 }
 
