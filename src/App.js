@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Root, Landing, Home, RequireAuth } from './component/index.js';
+import { Root, Landing, RequireAuth } from './component/index.js';
 
 function App() {
   return (
