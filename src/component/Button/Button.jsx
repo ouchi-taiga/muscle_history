@@ -1,12 +1,13 @@
 import React from 'react'
-import styles from './ButtonWithIcon.module.css'
+import styles from './Button.module.css'
 
-const ButtonWithIcon = (props) => {
+const Button = (props) => {
 
   return (
     <>
       <button
         className={styles.button}
+        type={props.type}
         onClick={props.onClick}
         style={props.buttonStyle}
       >
@@ -24,4 +25,4 @@ const ButtonWithIcon = (props) => {
   )
 }
 
-export default ButtonWithIcon
+export default Button

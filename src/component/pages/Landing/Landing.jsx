@@ -1,7 +1,7 @@
 import { React } from 'react'
 // import { useNavigate } from 'react-router-dom'
 import { useModal } from 'react-hooks-use-modal'
-import { Header, ButtonWithIcon, SignInModal, RightArrowIcon } from '../../index.js'
+import { Header, Button, SignInModal, RightArrowIcon } from '../../index.js'
 import styles from './Landing.module.css'
 
 const Landing = () => {
@@ -45,7 +45,7 @@ const Landing = () => {
         </p>
       </div>}
       {!isOpen && <div className={styles.buttonArea}>
-        <ButtonWithIcon
+        <Button
           name={'はじめる'}
           icon={<RightArrowIcon />}
           onClick={open}

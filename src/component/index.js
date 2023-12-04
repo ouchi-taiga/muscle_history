@@ -7,8 +7,9 @@ export { default as Home } from './pages/Home/Home'
 export { default as RequireAuth } from './RequireAuth/RequireAuth'
 export { default as Header } from './Header/Header'
 export { default as SignInModal } from './SignInModal/SignInModal'
-export { default as ButtonWithIcon } from './Button/ButtonWithIcon/ButtonWithIcon'
-export { default as InputFormWithIcon } from './InputForm/InputFormWithIcon/InputFormWithIcon'
+export { default as SignUp } from './SignUp/SignUp'
+export { default as Button } from './Button/Button'
+export { default as InputForm } from './InputForm/InputForm'
 
 // Icons
 export { default as RightArrowIcon } from './Icon/RightArrowIcon/RightArrowIcon'

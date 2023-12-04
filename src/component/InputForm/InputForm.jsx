@@ -1,15 +1,19 @@
 import React from 'react'
-import styles from './InputFormWithIcon.module.css'
+import styles from './InputForm.module.css'
 
-const InputFormWithIcon = (props) => {
+const InputForm = (props) => {
   return (
     <>
       <div className={styles.inputFormArea}>
         <input
+          id={props.id}
           className={styles.inputForm}
           placeholder={props.placeholder}
           type={props.type}
           style={props.inputFormStyle}
+          required={props.required}
+          value={props.value}
+          onChange={props.onChange}
         />
         <div
           className={styles.iconArea}
@@ -20,4 +24,4 @@ const InputFormWithIcon = (props) => {
   )
 }
 
-export default InputFormWithIcon
+export default InputForm
