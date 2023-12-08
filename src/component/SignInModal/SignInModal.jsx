@@ -1,89 +1,14 @@
 import React from 'react'
 import styles from './SignInModal.module.css'
-import { SignUp, Button, InputForm, RightArrowIcon, GoogleIcon, MailIcon, PasswordIcon } from '../index.js'
+import { SignIn, SignUp } from '../index.js'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import { auth, provider } from '../../firebase'
-import { signInWithRedirect } from 'firebase/auth'
 
-/**
- * スタイル
- */
-// メール入力フォーム
-const mailInputFormStyle = {
-  padding: '0px 30px 9px 60px',
-  width: 'calc(100% - 90px)',
-  fontSize: '2.3rem',
-  color: 'rgb(44, 62, 80)',
-  border: 'none',
-  borderBottom: '1px solid',
-  borderColor: 'rgb(44, 62, 80)',
-  background: 'rgba(0, 0, 0, 0)'
-};
-
-const mailInputFormIconStyle = {
-  width: '3rem',
-  height: '3rem',
-};
-
-// パスワード入力フォーム
-const passwordInputFormStyle = {
-  padding: '0px 30px 9px 60px',
-  width: 'calc(100% - 90px)',
-  fontSize: '2.3rem',
-  color: 'rgb(44, 62, 80)',
-  border: 'none',
-  borderBottom: '1px solid',
-  borderColor: 'rgb(44, 62, 80)',
-  background: 'rgba(0, 0, 0, 0)'
-};
-
-const passwordInputFormIconStyle = {
-  width: '3rem',
-  height: '3rem',
-};
-
-// サインインボタン
-const signInButtonStyle = {
-  width: '100%',
-  height: '100%',
-  color: 'rgb(44, 62, 80)',
-  background: 'rgba(0, 0, 0, 0)',
-  borderColor: 'rgb(44, 62, 80)',
-  borderRadius: '32px',
-  cursor: 'pointer',
-  fontSize: '2.2rem'
-};
-
-const signInButtonIconStyle = {
-  width: '2.3rem',
-  height: '2.3rem'
-};
-
-// Googleサインインボタン
-const googleSignInButtonStyle = {
-  width: '100%',
-  height: '100%',
-  color: '#F2F2F2',
-  background: 'rgba(44, 62, 80)',
-  border: 'none',
-  cursor: 'pointer',
-  fontSize: '1.8rem'
-};
-
-const googleSignInButtonIconStyle = {
-  width: '2.3rem',
-  height: '2.3rem'
-};
 
 
 const SignInModal = (props) => {
 
   const handleSelect = (index, last) => {
     console.log('Selected tab: ' + index + ', Last tab: ' + last);
-  }
-
-  const signInWithGoogle = () => {
-    signInWithRedirect(auth, provider)
   }
 
   const className  = styles[props.className];
@@ -105,54 +30,7 @@ const SignInModal = (props) => {
 
         {/* タブ1のコンテンツ */}
         <TabPanel className={styles.tabPanel}>
-          <div className={styles.signInTabContent}>
-            <div className={styles.messageArea}>
-              すでにアカウントをお持ちですか？
-            </div>
-
-            <div className={styles.mailInputForm}>
-              <InputForm
-                placeholder={'mail'}
-                icon={<MailIcon />}
-                inputFormStyle={mailInputFormStyle}
-                iconStyle={mailInputFormIconStyle}
-              />
-            </div>
-
-            <div className={styles.passwordInputForm}>
-              <InputForm
-                placeholder={'password'}
-                type={'password'}
-                icon={<PasswordIcon />}
-                inputFormStyle={passwordInputFormStyle}
-                iconStyle={passwordInputFormIconStyle}
-              />
-            </div>
-
-            <div className={styles.signInButton}>
-              <Button
-                name={'サインイン'}
-                icon={<RightArrowIcon />}
-                // TODO: メールアドレスによるサインイン機能の実装
-                // onClick={}
-                buttonStyle={signInButtonStyle}
-                iconStyle={signInButtonIconStyle}
-              />
-            </div>
-
-            <hr className={styles.horizontalLine}/>
-
-            <div className={styles.googleSignInButton}>
-              <Button
-                name={'Googleでサインイン'}
-                icon={<GoogleIcon />}
-                // TODO: Googleによるサインイン機能の実装
-                onClick={signInWithGoogle}
-                buttonStyle={googleSignInButtonStyle}
-                iconStyle={googleSignInButtonIconStyle}
-              />
-            </div>
-          </div>
+          <SignIn />
         </TabPanel>
 
         {/* タブ2のコンテンツ */}
