@@ -74,9 +74,6 @@ const SignUp = () => {
       ...prev,
       [e.target.id]: e.target.value,
     }));
-    console.log(e.target.id)
-    console.log('mail: ' + mail)
-    console.log('password: ' + password)
   }
   
   const onSubmit = (e) => {

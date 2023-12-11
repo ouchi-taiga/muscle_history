@@ -1,5 +1,5 @@
 import React from 'react'
-import { SiteIcon, UserIcon } from '../index.js'
+import { SiteIcon, DropdownMenu } from '../index.js'
 import styles from './Header.module.css'
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
             About
           </li>
           <li className={styles.userIconArea}>
-            <UserIcon />
+            <DropdownMenu />
           </li>
         </ul>
       </nav>

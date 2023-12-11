@@ -11,6 +11,7 @@ export { default as SignIn } from './SignIn/SignIn'
 export { default as SignUp } from './SignUp/SignUp'
 export { default as Button } from './Button/Button'
 export { default as InputForm } from './InputForm/InputForm'
+export { default as DropdownMenu } from './DropdownMenu/DropdownMenu'
 
 // Icons
 export { default as RightArrowIcon } from './Icon/RightArrowIcon/RightArrowIcon'
