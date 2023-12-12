@@ -7,20 +7,27 @@
   .dropdownMenu {
     width: 15rem;
     height: 15rem;
-    background-color: #F2F2F2;
+    background-color: #2c3e50;
     position: absolute;
     right: 0px;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
   }
 
   .dropdownMenuList {
     list-style: none;
     padding-left: 0;
+    color: #f2f2f2;
+    font-size: 1.5rem;
   }
 
-  .dropdownMenuListItem1, .dropdownMenuListItem2 {
-    width: 100%;
-    color: #2c3e50;
-    font-size: 1.5rem;
+  .dropdownMenuList li {
+    padding: 5px 10px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  .dropdownMenuList li:hover {
+    opacity: 0.5;
   }
 }
 

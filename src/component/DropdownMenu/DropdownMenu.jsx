@@ -31,11 +31,13 @@ const DropdownMenu = () => {
       {isOpen && 
         <div className={styles.dropdownMenu}>
           <ul className={styles.dropdownMenuList}>
-            <li className={styles.dropdownMenuListItem1}>
+            <li>
+              メールアドレス
+            </li>
+            <li>
               未定
             </li>
             <li
-              className={styles.dropdownMenuListItem2}
               onClick={() => auth.signOut()}
             >
               サインアウト
