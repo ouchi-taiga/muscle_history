@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { useAuthState } from 'react-firebase-hooks/auth'
 import { Landing, Home } from '../index.js'
 import { auth } from '../../firebase.js'
 import { onAuthStateChanged } from 'firebase/auth'
