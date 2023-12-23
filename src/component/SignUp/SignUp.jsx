@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useRef} from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './SignUp.module.css'
 import { Button, InputForm, RightArrowIcon, MailIcon, PasswordIcon } from '../index.js'
@@ -61,26 +61,17 @@ const signUpButtonIconStyle = {
 
 
 const SignUp = () => {
-  const [formData, setFormData] = useState({
-    mail: '',
-    password: ''
-  })
-  
-  const { mail, password } = formData;
+  const mailRef = useRef();
+  const passwordRef = useRef();
   const navigate = useNavigate();
-  
-  const onChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
-  }
   
   const onSubmit = (e) => {
     e.preventDefault();
+    const mail = mailRef.current.value;
+    const password = passwordRef.current.value;
     try {
       createUserWithEmailAndPassword(auth, mail, password);
-      navigate('/')
+      navigate('/home')
     } catch(error) {
       console.log(error);
     }
@@ -102,8 +93,7 @@ const SignUp = () => {
               inputFormStyle={mailInputFormStyle}
               iconStyle={mailInputFormIconStyle}
               required={'required'}
-              value={mail}
-              onChange={onChange}
+              refs={mailRef}
             />
           </div>
 
@@ -116,8 +106,7 @@ const SignUp = () => {
               inputFormStyle={passwordInputFormStyle}
               iconStyle={passwordInputFormIconStyle}
               requierd={'required'}
-              value={password}
-              onChange={onChange}
+              refs={passwordRef}
             />
           </div>
 

@@ -14,6 +14,7 @@ const InputForm = (props) => {
           required={props.required}
           value={props.value}
           onChange={props.onChange}
+          ref={props.refs}
         />
         <div
           className={styles.iconArea}

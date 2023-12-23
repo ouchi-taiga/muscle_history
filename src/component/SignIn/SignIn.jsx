@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useRef} from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './SignIn.module.css'
 import { Button, InputForm, RightArrowIcon, GoogleIcon, MailIcon, PasswordIcon } from '../index.js'
@@ -78,29 +78,19 @@ const googleSignInButtonIconStyle = {
 
 
 const SignIn = () => {
-  const [formData, setFormData] = useState({
-    mail: '',
-    password: ''
-  })
+
+  const mailRef = useRef();
+  const passwordRef = useRef();
   
-  const { mail, password } = formData;
+  
   const navigate = useNavigate();
-  
-  const onChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
-  }
 
   const onSubmit = async (e) => {
     e.preventDefault()
+    const mail = mailRef.current.value;
+    const password = passwordRef.current.value;
     try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        mail,
-        password
-      );
+      const userCredential = await signInWithEmailAndPassword(auth, mail, password);
       if(userCredential.user){
         navigate('/home');
       }
@@ -134,8 +124,7 @@ const SignIn = () => {
               icon={<MailIcon />}
               inputFormStyle={mailInputFormStyle}
               iconStyle={mailInputFormIconStyle}
-              value={mail}
-              onChange={onChange}
+              refs={mailRef}
             />
           </div>
 
@@ -147,8 +136,7 @@ const SignIn = () => {
               icon={<PasswordIcon />}
               inputFormStyle={passwordInputFormStyle}
               iconStyle={passwordInputFormIconStyle}
-              value={password}
-              onChange={onChange}
+              refs={passwordRef}
             />
           </div>
 
