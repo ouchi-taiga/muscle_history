@@ -1,12 +1,14 @@
 import React from 'react'
-import { auth } from '../../../firebase'
+import { Header } from '../../index.js'
+import styles from './Home.module.css'
 
 const Home = () => {
   return (
-    <>
-      <div>Home</div>
-      <button onClick={() => auth.signOut()}>サインアウト</button>
-    </>
+    <div className={styles.container}>
+      <div>
+        <Header />
+      </div>
+    </div>
   )
 }
 

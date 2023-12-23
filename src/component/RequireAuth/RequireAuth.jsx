@@ -1,13 +1,32 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Landing, Home } from '../index.js'
 import { auth } from '../../firebase.js'
+import { onAuthStateChanged } from 'firebase/auth'
 
 const RequireAuth = () => {
-  const [ user ] = useAuthState(auth);
+  const [user, setUser] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+    setLoading(false);
+    });
+  }, [])
 
   return (
-    user ? <Home /> : <Landing />
+    <>
+    {!loading && (
+      <>
+      {!user ? (
+        <Landing />
+      ) : (
+        <Home />
+      )}
+      </>
+    )}
+    </>
   )
 }
 

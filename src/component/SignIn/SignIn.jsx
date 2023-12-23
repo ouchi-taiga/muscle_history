@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import styles from './SignIn.module.css'
 import { Button, InputForm, RightArrowIcon, GoogleIcon, MailIcon, PasswordIcon } from '../index.js'
 import { auth, provider } from '../../firebase'
-import { signInWithEmailAndPassword, signInWithRedirect } from 'firebase/auth'
+import { GoogleAuthProvider, getRedirectResult, signInWithEmailAndPassword, signInWithRedirect } from 'firebase/auth'
 
 
 /**
@@ -93,24 +93,38 @@ const SignIn = () => {
     }));
   }
 
+  getRedirectResult(auth)
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      const user = result.user
+    }).catch((error) => {
+    });
+
   const onSubmit = async (e) => {
-    e.preventDefault()
-    try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        mail,
-        password
-      );
-      if(userCredential.user){
-        navigate('/');
-      }
-    } catch(error) {
-      console.log(error)
-    }
+    // e.preventDefault()
+    // try {
+    //   const userCredential = await signInWithEmailAndPassword(
+    //     auth,
+    //     mail,
+    //     password
+    //   );
+    //   if(userCredential.user){
+    //     navigate('/');
+    //   }
+    // } catch(error) {
+    //   console.log(error)
+    // }
   }
 
-  const signInWithGoogle = () => {
-    signInWithRedirect(auth, provider)
+  const signInWithGoogle = async (event) => {
+    try {
+      signInWithRedirect(auth, provider);
+      navigate('/');
+    } catch(error) {
+      console.log(error);
+    }
+    
   }
 
   return (

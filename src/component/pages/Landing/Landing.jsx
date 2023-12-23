@@ -1,33 +1,34 @@
 import { React } from 'react'
-// import { useNavigate } from 'react-router-dom'
 import { useModal } from 'react-hooks-use-modal'
 import { Header, Button, SignInModal, RightArrowIcon } from '../../index.js'
 import styles from './Landing.module.css'
 
+/**
+ * スタイル
+ */
+const startButtonStyle = {
+  width: '100%',
+  height: '100%',
+  color: '#F2F2F2',
+  background: 'rgba(230, 126, 34, 0.65)',
+  border: 'none',
+  borderRadius: '32px',
+  cursor: 'pointer',
+  fontSize: '2.3rem'
+}
+const startButtonIconStyle = {
+  width: '2.3rem',
+  height: '2.3rem'
+}
+
 const Landing = () => {
 
-  // const navigate = useNavigate();
   const [Modal, open, close, isOpen] = useModal('root', {
     preventScroll: true,
     focusTrapKOption: {
       clickOutsideDeactives: false
     },
   })
-
-  const startButtonStyle = {
-    width: '100%',
-    height: '100%',
-    color: '#F2F2F2',
-    background: 'rgba(230, 126, 34, 0.65)',
-    border: 'none',
-    borderRadius: '32px',
-    cursor: 'pointer',
-    fontSize: '2.3rem'
-  }
-  const startButtonIconStyle = {
-    width: '2.3rem',
-    height: '2.3rem'
-  }
 
   return (
     <div className={styles.container}>
