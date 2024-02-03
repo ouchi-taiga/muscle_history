@@ -12,6 +12,10 @@ export { default as SignUp } from './SignUp/SignUp'
 export { default as Button } from './Button/Button'
 export { default as InputForm } from './InputForm/InputForm'
 export { default as DropdownMenu } from './DropdownMenu/DropdownMenu'
+export { default as Calendar } from './Calendar/Calendar'
+export { default as CalendarHeader } from './Calendar/CalendarHeader/CalendarHeader'
+export { default as CalendarSideBar } from './Calendar/CalendarSideBar/CalendarSideBar'
+export { default as CalendarBody } from './Calendar/CalendarBody/CalendarBody'
 
 // Icons
 export { default as RightArrowIcon } from './Icon/RightArrowIcon/RightArrowIcon'

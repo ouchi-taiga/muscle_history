@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header } from '../../index.js'
+import { Header, Calendar } from '../../index.js'
 import styles from './Home.module.css'
 
 const Home = () => {
@@ -7,6 +7,9 @@ const Home = () => {
     <div className={styles.container}>
       <div>
         <Header />
+      </div>
+      <div className={styles.calendar}>
+        <Calendar />
       </div>
     </div>
   )

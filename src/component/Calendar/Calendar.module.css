@@ -1,0 +1,22 @@
+/** PCサイズ **/
+@media screen and (min-width: 1025px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+  }
+}
+
+
+
+/** タブレットサイズ **/
+@media screen and (min-width: 481px) and (max-width:1024px) {
+  p {color : green}
+}
+
+
+
+/** モバイルサイズ **/
+@media screen and (max-width: 480px) {
+  p {color : blue}
+}
