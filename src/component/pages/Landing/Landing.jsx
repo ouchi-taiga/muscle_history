@@ -13,7 +13,6 @@ const startButtonStyle = {
   background: 'rgba(230, 126, 34, 0.65)',
   border: 'none',
   borderRadius: '32px',
-  cursor: 'pointer',
   fontSize: '2.3rem'
 }
 const startButtonIconStyle = {

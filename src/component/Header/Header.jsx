@@ -4,7 +4,7 @@ import styles from './Header.module.css'
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.headerLogo}>
         <SiteIcon />
         <div>筋肉歴</div>

@@ -1,12 +1,12 @@
 import dayjs from 'dayjs'
 
 /**
- * 現在の月の日付を取得
+ * 現在の月のカレンダーを取得
  * 
  * @param {*} month 
  * @returns 
  */
-export function getMonth(month = dayjs().month()) {
+export function getMonth(month) {
   const year = dayjs().year();
   const firstDayOfWeek = dayjs(new Date(year, month, 1)).day();
   let currentDay = 0 - firstDayOfWeek;
@@ -19,7 +19,17 @@ export function getMonth(month = dayjs().month()) {
   return daysMatrix;
 }
 
-export function getDay() {
-  const current = dayjs().date();
-  return current;
+/** 現在の年を取得 */
+export function getCurrentYear() {
+  return dayjs().year();
+}
+
+/** 現在の月を取得 */
+export function getCurrentMonth() {
+  return dayjs().month() + 1;
+}
+
+/** 現在の日を取得 */
+export function getCurrentDay() {
+  return dayjs().date();
 }

@@ -15,9 +15,18 @@
     justify-self: center;    
   }
 
+  .Sunday {
+    color: #e74c3c;
+  }
+
+  .Saturday {
+    color: #3498db;
+  }
+
   .week {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    height: 3.5rem
   }
 
   .day {

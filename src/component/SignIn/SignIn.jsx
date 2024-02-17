@@ -51,7 +51,6 @@ const signInButtonStyle = {
   background: 'rgba(0, 0, 0, 0)',
   borderColor: 'rgb(44, 62, 80)',
   borderRadius: '32px',
-  cursor: 'pointer',
   fontSize: '2.2rem'
 };
 
@@ -67,7 +66,6 @@ const googleSignInButtonStyle = {
   color: '#F2F2F2',
   background: 'rgba(44, 62, 80)',
   border: 'none',
-  cursor: 'pointer',
   fontSize: '1.8rem'
 };
 
