@@ -34,6 +34,7 @@
     justify-self: center;
     width: 2.5rem;
     text-align: center;
+    cursor: pointer;
   }
 
   .currentDay {

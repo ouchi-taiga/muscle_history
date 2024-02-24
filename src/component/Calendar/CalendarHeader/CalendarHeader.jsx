@@ -3,8 +3,8 @@ import styles from './CalendarHeader.module.css'
 import { Button, LeftArrowIcon, RightArrowIcon } from '../../index.js'
 
 const arrowButtonStyle = {
-  width: '3rem',
-  height: '2.5rem',
+  width: '2.7rem',
+  height: '2.2rem',
   background: 'none',
   border: 'none'
 }
@@ -22,7 +22,6 @@ const CalendarHeader = (props) => {
   const handlePrevMonth = () => {
     const prevMonth = (activeMonth - 1) % 12;
     if (prevMonth === 0) {
-      console.log(activeYear)
       setActiveYear(activeYear - 1);
       setActiveMonth(12);
       return;
