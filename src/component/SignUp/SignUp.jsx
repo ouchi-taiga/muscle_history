@@ -113,7 +113,7 @@ const SignUp = () => {
           <div className={styles.signUpButton}>
             <Button
               type={'submit'}
-              name={'アカウントを作成'}
+              text={'アカウントを作成'}
               icon={<RightArrowIcon />}
               buttonStyle={signUpButtonStyle}
               iconStyle={signUpButtonIconStyle}

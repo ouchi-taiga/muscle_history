@@ -141,7 +141,7 @@ const SignIn = () => {
           <div className={styles.signInButton}>
             <Button
               type={'submit'}
-              name={'サインイン'}
+              text={'サインイン'}
               icon={<RightArrowIcon />}
               buttonStyle={signInButtonStyle}
               iconStyle={signInButtonIconStyle}
@@ -152,7 +152,7 @@ const SignIn = () => {
 
           <div className={styles.googleSignInButton}>
             <Button
-              name={'Googleでサインイン'}
+              text={'Googleでサインイン'}
               icon={<GoogleIcon />}
               onClick={signInWithGoogle}
               buttonStyle={googleSignInButtonStyle}

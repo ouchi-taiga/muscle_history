@@ -2,6 +2,11 @@
   position: relative;
 }
 
+.inputForm {
+  width: 20rem;
+  height: 3rem;
+}
+
 .inputForm:focus {
   outline: none;
 }

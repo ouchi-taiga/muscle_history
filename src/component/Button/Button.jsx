@@ -13,8 +13,8 @@ const Button = (props) => {
       >
         <div className={styles.buttonContentArea}>
           <div
-            className={styles.nameArea}
-          >{props.name}</div>
+            className={styles.textArea}
+          >{props.text}</div>
           <div
             className={styles.iconArea}
             style={props.iconStyle}

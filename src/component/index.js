@@ -15,6 +15,8 @@ export { default as DropdownMenu } from './DropdownMenu/DropdownMenu'
 export { default as Calendar } from './Calendar/Calendar'
 export { default as CalendarHeader } from './Calendar/CalendarHeader/CalendarHeader'
 export { default as CalendarBody } from './Calendar/CalendarBody/CalendarBody'
+export { default as List } from './List/List'
+export { default as AccordionPanel } from './AccordionPanel/AccordionPanel'
 
 // Icons
 export { default as LeftArrowIcon } from './Icon/LeftArrowIcon/LeftArrowIcon'

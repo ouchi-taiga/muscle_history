@@ -46,7 +46,7 @@ const Landing = () => {
       </div>}
       {!isOpen && <div className={styles.buttonArea}>
         <Button
-          name={'はじめる'}
+          text={'はじめる'}
           icon={<RightArrowIcon />}
           onClick={open}
           buttonStyle={startButtonStyle}

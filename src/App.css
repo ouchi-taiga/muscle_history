@@ -22,10 +22,10 @@ html {
 body {
   background-color: #ecf0f1;
   font-family: 'Poppins', 'Noto Sans JP', sans-serif;
-  min-height: 100vh;
+  min-height: 100%;
   font-weight: 300;
 }
 
 #root {
-  min-height: 100vh;
+  min-height: 100%;
 }

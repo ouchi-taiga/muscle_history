@@ -5,6 +5,8 @@
 @media screen and (min-width: 1025px) {
   .button {
     position: relative;
+    width: 10rem;
+    height: 4rem;
   }
   
   .button:hover {
@@ -21,7 +23,7 @@
     position: relative;
   }
 
-  .nameArea {
+  .textArea {
     position: absolute;
     right: 0;
     left: 0;
